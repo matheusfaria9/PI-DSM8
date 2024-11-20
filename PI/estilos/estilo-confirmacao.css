@@ -1,0 +1,125 @@
+:root{
+    --login-primary-color: #00274C;
+    --hover-primary-color: #FF8C00;
+    --login-secundary-color: #F2F2F2;
+    --fonte-primary-color: #FFFFFF;
+    --fonte-main-family: 'Roboto', sans-serif;
+}
+
+body{
+    font-family: var(--fonte-main-family);
+    background-color: var(--login-primary-color);
+    color: var(--fonte-primary-color);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 1em;
+}
+
+.logo{
+    width: 20em;
+    height: auto;
+ }
+
+.head-menu{
+    background-color: var(--login-secundary-color);
+    color: var(--login-primary-color);
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+ }
+
+.title{
+    margin: 0;
+}
+
+
+.mensagem{
+    margin: auto;
+    margin-top: 180px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid var(--login-secundary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    width: 80vw;
+    font-size: 3em;
+    background-color: var(--hover-primary-color);
+}
+
+.menu-voltar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.menu-voltar li{
+    list-style-type: none;
+    border-radius: 4px;
+    border: 2px solid var(--fonte-primary-color);
+    padding: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1em;
+}
+
+.menu-voltar a{
+    text-decoration: none;
+    color: var(--fonte-primary-color);
+    font-size: large;
+}
+
+.menu-voltar li:hover{
+    background-color: var(--hover-primary-color);
+    border-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 15em;
+    }
+
+    .mensagem {
+        margin-top: 120px;
+        padding: 15px;
+        font-size: 2em;
+        width: 90vw;
+    }
+
+    .menu-voltar {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .menu-voltar li {
+        margin: 10px 0;
+        padding: 10px;
+        width: 90%;
+    }
+
+    .menu-voltar a {
+        font-size: medium;
+    }
+}
+
+@media (max-width: 480px) {
+    .mensagem {
+        font-size: 1.5em;
+        padding: 10px;
+    }
+
+    .menu-voltar li {
+        padding: 8px;
+    }
+
+    .menu-voltar a {
+        font-size: small;
+    }
+}
+

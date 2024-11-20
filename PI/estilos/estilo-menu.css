@@ -1,0 +1,114 @@
+:root{
+    --login-primary-color: #00274C;
+    --hover-primary-color: #FF8C00;
+    --login-secundary-color: #F2F2F2;
+    --fonte-primary-color: #FFFFFF;
+    --fonte-main-family: 'Roboto', sans-serif;
+}
+
+body{
+    font-family: var(--fonte-main-family);
+    background-color: var(--login-primary-color);
+    color: var(--fonte-primary-color);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 1em;
+}
+
+.head-menu{
+    background-color: var(--login-secundary-color);
+    color: var(--login-primary-color);
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+ }
+
+.logo{
+    width: 20em;
+    height: auto;
+ }
+
+.title{
+    margin: 0;
+}
+
+.container{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-acesso{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 3.4em;
+    padding: 2em;
+    background-color: var(--login-secundary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30em;
+    height: 25em;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-acesso li{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.menu-acesso a:hover{
+    background-color: var(--hover-primary-color);
+    border-color: transparent;
+    color: var(--fonte-primary-color);
+    transition: 0.5s;
+}
+
+.btn{
+    text-decoration: none;
+    color: var(--login-primary-color);
+    background-color: var(--login-secundary-color);
+    padding: 1rem 2em;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    border: 2px solid var(--login-primary-color);
+    width: 100%;
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .head-menu {
+        padding: 0.5em;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        width: 15em;
+    }
+
+    .container {
+        padding: 1em;
+    }
+
+    .menu-acesso {
+        width: 90%;
+        height: auto;
+        padding: 1.5em;
+        gap: 2em;
+    }
+
+    .btn {
+        font-size: 1.5em;
+        padding: 0.8rem 1.5em;
+    }
+}

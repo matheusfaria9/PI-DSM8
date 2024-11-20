@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/estilo-ocorrencia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Ocorrências</title>
+</head>
+
+<body>
+    <header class="head-menu">
+        <img src="./logos_roe/logoroe_semfundo.png" alt="logo do sistema roe" class="logo">
+        <!--<h1 class="title">Registro de Ocorrências</h1>-->
+
+        <nav class="menu-susp">
+            <ul>
+                <li><a href="menu.html" class="btn btn-menu">Menu</a></li>
+                <li><a href="login.html" class="btn btn-exit">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form action="confirmacao.html" autocomplete="off" method="post" class="container">
+        <fieldset class="form-ocorrencia">
+            <p class="form-title">Informe os Detalhes da Ocorrência</p>
+
+            <label for="data">Data:</label>
+            <input type="date" id="name" name="data" required>
+
+            <br>
+
+            <label for="sala">Sala: </label>
+            <input type="text" list="sala-list" name="sala" required placeholder="Escolha uma opção">
+            <datalist id="sala-list">
+                <option value="6A">
+                <option value="7B">
+                <option value="8C">
+                <option value="9D">
+            </datalist>
+
+            <br>
+
+            <label for="nome-aluno">Nome do aluno:</label>
+            <input type="text" id="nome-aluno" name="nome-aluno" required placeholder="Digite o nome do aluno">
+
+            <br>
+
+            <label for="local">Local da ocorrência: </label>
+            <input type="text" list="local-list" name="local" required placeholder="Escolha uma opção">
+            <datalist id="local-list">
+                <option value="Sala de Aula">
+                <option value="Dependências da Escola">
+            </datalist>
+
+            <br>
+
+            <label for="periodo">Período da ocorrência: </label>
+            <input type="text" list="periodo-list" name="periodo" required placeholder="Escolha uma opção">
+            <datalist id="periodo-list">
+                <option value="Manhã">
+                <option value="Tarde">
+                <option value="Almoço">
+                <option value="Intervalos">
+            </datalist>
+
+            <br>
+
+            <label for="descricao">Descreva a ocorrência: </label><br>
+            <textarea name="descricao" id="descricao" required rows="7" maxlength="2000" minlength="20"
+                placeholder="Conte-nos tudo"></textarea>
+
+            <br>
+
+            <button type="submit" class=" btn btn-ocorrencia">Enviar</button>
+        </fieldset>
+
+
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+:root{
+    --login-primary-color: #00274C;
+    --hover-primary-color: #FF8C00;
+    --login-secundary-color: #F2F2F2;
+    --fonte-primary-color: #FFFFFF;
+    --fonte-main-family: 'Roboto', sans-serif;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--login-primary-color);
+    font-family: var(--fonte-main-family);
+}
+
+.form{
+    width: 80%;
+    max-width: 32rem;
+    background: var(--login-secundary-color);
+    border-radius: 10px;
+}
+
+.logo{
+    width: 16em;
+    height: auto;
+ }
+
+.form__fieldset{
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: .25em;
+    padding: 2rem;
+}
+
+.form__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.form__title{
+    font-weight: 300;
+    font-size: 2rem;
+    color: var(--login-primary-color);
+    padding-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.form__label{
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.form__input{
+    padding: .5em 0;
+    font-size: 1.2rem;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--login-primary-color);
+    margin-bottom: .8rem;
+    outline: none;
+    transition: padding-left .08s linear;
+    background-color: var(--login-secundary-color);
+}
+
+.form__input:focus{
+    outline: 2px solid var(--hover-primary-color);
+    background-color: var(--fonte-primary-color);
+    padding-left: .3rem;
+    border: none;
+}
+
+.btn{
+    text-transform: uppercase;
+    font-size: 1rem;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    padding: .8rem 1.2rem;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.btn-primary{
+    background-color: var(--login-primary-color);
+    color: var(--fonte-primary-color);
+}
+
+.btn:hover {
+    background-color: var(--hover-primary-color);
+}
+
+.form__action{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .form {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .logo {
+        width: 8em;
+    }
+
+    .form__title {
+        font-size: 1.8rem;
+        padding-top: 1rem;
+    }
+
+    .form__label {
+        font-size: 0.9rem;
+    }
+
+    .form__input {
+        font-size: 1rem;
+        padding: 0.4em 0;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+}

@@ -1,0 +1,206 @@
+:root {
+    --login-primary-color: #00274C;
+    --hover-primary-color: #FF8C00;
+    --login-secundary-color: #F2F2F2;
+    --fonte-primary-color: #FFFFFF;
+    --fonte-main-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--fonte-main-family);
+    background-color: var(--login-primary-color);
+    color: var(--fonte-primary-color);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 1em;
+}
+
+.logo{
+    width: 20em;
+    height: auto;
+ }
+
+.head-menu {
+    background-color: var(--login-secundary-color);
+    color: var(--login-primary-color);
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9.5em;
+}
+
+.title {
+    margin: 0;
+}
+
+.menu-susp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-susp li {
+    list-style-type: none;
+    display: inline;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-susp a {
+    text-decoration: none;
+    color: var(--login-primary-color);
+    font-size: large;
+}
+
+.menu-susp li:hover {
+    background-color: var(--hover-primary-color);
+    border-color: transparent;
+}
+
+.menu-susp a:hover{
+    color: var(--fonte-primary-color);
+}
+
+.container {
+    margin-top: 150px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-ocorrencia {
+    border-color: transparent;
+    border-radius: 4px;
+    background-color: var(--login-secundary-color);
+    color: var(--login-primary-color);
+    margin-top: 2.5em;
+    width: 60%;
+    min-width: 450px;
+    max-height: 800px;
+    padding: 1em;
+}
+
+.form-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em;
+    color: var(--login-primary-color);
+}
+
+
+label,
+input,
+textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input,
+textarea {
+    background-color: var(--login-secundary-color);
+    border: 2px solid transparent;
+    border-bottom-color: var(--login-primary-color);
+    padding: .75em;
+    color: black;
+    outline: 0;
+}
+
+input:invalid:focus,
+textarea:invalid:focus {
+    border-bottom: 2px solid #ff000d;
+}
+
+input:valid:focus,
+textarea:valid:focus {
+    border-bottom: 2px solid #0ec72a;
+}
+
+input:focus,
+textarea:focus {
+    border-bottom: 2px solid var(--login-secundary-color);
+}
+
+.btn {
+    background-color: var(--login-secundary-color);
+    border: 2px solid var(--login-primary-color);
+    border-radius: 4px;
+    color: var(--login-primary-color);
+    cursor: pointer;
+    padding: .6em;
+    font-size: 1.1em;
+}
+
+.btn:hover {
+    background-color: var(--hover-primary-color);
+    border-color: transparent;
+    color: var(--fonte-primary-color);
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 15em;
+    }
+
+    .head-menu {
+        flex-direction: column;
+        gap: 1em;
+        padding: 0.5em;
+    }
+
+    .form-ocorrencia {
+        width: 90%;
+        padding: 1em;
+        margin-top: 1em;
+    }
+
+    .form-title {
+        font-size: 1.2em;
+    }
+
+    label, input, textarea {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        font-size: 1em;
+        padding: 0.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 12em;
+    }
+
+    .head-menu {
+        padding: 0.5em;
+        gap: 0.5em;
+    }
+
+    .form-ocorrencia {
+        width: 95%;
+        padding: 0.5em;
+    }
+
+    .form-title {
+        font-size: 1em;
+    }
+
+    input, textarea {
+        font-size: 0.8em;
+        padding: 0.5em;
+    }
+
+    .btn {
+        font-size: 0.9em;
+        padding: 0.4em;
+    }
+}
